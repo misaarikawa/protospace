@@ -25,14 +25,14 @@ user
           belongs_to :prototype
 
 * Database creation
-|users                  |prototypes      |comments             |
-|:----------------------|:---------------|:--------------------|
-|avatar            :text|user_id :integer|user_id      :integer|
-|top_aligned_media :text|title      :text|prototype_id :integer|
-|profile           :text|top_image  :text|comment         :text|
-|works             :text|sub_image  :text|                     |
-|member_of         :text|catch_copy :text|                     |
-|                       |concept    :text|                     |
+|users                  |prototypes      |comments             |<br>
+|:----------------------|:---------------|:--------------------|<br>
+|avatar            :text|user_id :integer|user_id      :integer|<br>
+|top_aligned_media :text|title      :text|prototype_id :integer|<br>
+|profile           :text|top_image  :text|comment         :text|<br>
+|works             :text|sub_image  :text|                     |<br>
+|member_of         :text|catch_copy :text|                     |<br>
+|                       |concept    :text|                     |<br>
 
 * Database initialization
 
