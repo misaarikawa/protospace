@@ -5,34 +5,34 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version<br>
 2.3.0
 
-* System dependencies
+* System dependencies<br>
 rails 4.2.5
 
-* Configuration
-user
- has_many :prototypes
- has_many :comments
+* Configuration<br>
+user<br>
+ has_many :prototypes<br>
+ has_many :comments<br>
 
-     prototype
-     belongs_to :user
-     has_many :comments
+     prototype<br>
+     belongs_to :user<br>
+     has_many :comments<br>
 
-          comment
-          belongs_to :user
-          belongs_to :prototype
+          comment<br>
+          belongs_to :user<br>
+          belongs_to :prototype<br>
 
-* Database creation
-|users                  |prototypes      |comments             |<br>
-|:----------------------|:---------------|:--------------------|<br>
-|avatar            :text|user_id :integer|user_id      :integer|<br>
-|top_aligned_media :text|title      :text|prototype_id :integer|<br>
-|profile           :text|top_image  :text|comment         :text|<br>
-|works             :text|sub_image  :text|                     |<br>
-|member_of         :text|catch_copy :text|                     |<br>
-|                       |concept    :text|                     |<br>
+* Database creation<br>
+|users             |     |prototypes |        |comments     |        |<br>
+|:-----------------|-----|:----------|--------|:------------|--------|<br>
+|avatar            |:text|user_id    |:integer|user_id      |:integer|<br>
+|top_aligned_media |:text|title      |:text   |prototype_id |:integer|<br>
+|profile           |:text|top_image  |:text   |comment      |:text   |<br>
+|works             |:text|sub_image  |:text   |             |        |<br>
+|member_of         |:text|catch_copy |:text   |             |        |<br>
+|                  |     |concept    |:text   |             |        |<br>
 
 * Database initialization
 
