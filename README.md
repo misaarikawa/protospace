@@ -11,29 +11,41 @@ Things you may want to cover:
 * System dependencies<br>
 rails 4.2.5
 
-* Configuration<br>
-user<br>
- has_many :prototypes<br>
- has_many :comments<br>
+* Assosiation  
 
-     prototype<br>
-     belongs_to :user<br>
-     has_many :comments<br>
+users  
+ has_many :prototypes  
+ has_many :comments  
 
-          comment<br>
-          belongs_to :user<br>
-          belongs_to :prototype<br>
+prototypes  
+ belongs_to :user  
+ has_many :pt_images  
+ has_many :comments  
+ has_many :likes  
 
-* Database creation<br>
+pt_images  
+ belongs_to :prototypes  
 
-|users|type|prototypes|type|comments|type|likes|type<br>
-|:----|:---|:---------|:---|:-------|:---|:-----|----|<br>
-|avatar|:text|user_id|:integer|user_id|:integer|user_id|:integer|<br>
-|top_aligned_media|:text|title|:text|prototype_id |:integer|prototype_id|:integer|<br>
-|profile|:text|top_image|:text|comment|:text|like|:str|<br>
-|works|:text|sub_image|:text|<br>
-|member_of|:text|catch_copy|:text|<br>
-|concept|:text|<br>
+comments  
+ belongs_to :user  
+ belongs_to :prototype  
+
+likes  
+ belongs_to :users  
+ belongs_to :prototypes  
+
+
+
+* Database creation  
+
+|users|type|prototypes|type|pt_images|type|comments|type|likes|type  
+|:----|:---|:---------|:---|:-------|:---|:-------|:---|:----|----|  
+|avatar|:text|user_id|:integer|user_id|:integer|user_id|:integer|user_id|:integer|  
+|top_aligned_media|:text|title|:text|prototype_id|:integer|prototype_id |:integer|prototype_id|:integer|  
+|profile|:text|catch_copy|:text|top_image|:text|comment|:text|like|:str|  
+|works|:text|concept|:text|sub_image1|:text|  
+|member_of|:text| | |sub_image2|:text  
+| | | | |sub_image3|:text 
 
 
 
