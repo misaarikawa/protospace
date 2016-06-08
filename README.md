@@ -39,16 +39,16 @@ likes
 ###Database creation  
 
 |users|type   
-|:----|:--- 
+|:----|:---  
+|name|:str
 |avatar|:text  
 |top_aligned_media|:text    
 |profile|:text  
 |works|:text   
 |member_of|:text  
-  
 
-|prototypes|type 
-|:---------|:---   
+|prototypes|type  
+|:---------|:---  
 |user_id|:integer  
 |title|:text  
 |catch_copy|:text  
@@ -68,10 +68,9 @@ likes
 |user_id|:integer  
 |prototype_id   
 |:integer  
-|comment|:text  
+|content|:text  
 
-|likes|type   
+|likes|type  
 |:----|----  
 |user_id|:integer  
 |prototype_id|:integer  
-|like|:str  
