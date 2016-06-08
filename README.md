@@ -5,13 +5,13 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version<br>
+###Ruby version  
 2.3.0
 
-* System dependencies<br>
+###System dependencies  
 rails 4.2.5
 
-* Assosiation  
+###Database Assosiation  
 
 users  
  has_many :prototypes  
@@ -36,19 +36,42 @@ likes
 
 
 
-* Database creation  
+###Database creation  
 
-|users|type|prototypes|type|pt_images|type|comments|type|likes|type  
-|:----|:---|:---------|:---|:-------|:---|:-------|:---|:----|----|  
-|avatar|:text|user_id|:integer|user_id|:integer|user_id|:integer|user_id|:integer|  
-|top_aligned_media|:text|title|:text|prototype_id|:integer|prototype_id |:integer|prototype_id|:integer|  
-|profile|:text|catch_copy|:text|top_image|:text|comment|:text|like|:str|  
-|works|:text|concept|:text|sub_image1|:text|  
-|member_of|:text| | |sub_image2|:text  
-| | | | |sub_image3|:text 
+|users|type   
+|:----|:--- 
+|avatar|:text  
+|top_aligned_media|:text    
+|profile|:text  
+|works|:text   
+|member_of|:text  
+  
 
+|prototypes|type 
+|:---------|:---   
+|user_id|:integer  
+|title|:text  
+|catch_copy|:text  
+|concept|:text  
 
+|pt_image|type  
+|:-------|:---  
+|user_id|:integer  
+|prototype_id|:integer  
+|top_image|:text  
+|sub_image1|:text  
+|sub_image2|:text  
+|sub_image3|:text  
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-* Database initialization
+|comments|type  
+|:-------|:---  
+|user_id|:integer  
+|prototype_id   
+|:integer  
+|comment|:text  
+
+|likes|type   
+|:----|----  
+|user_id|:integer  
+|prototype_id|:integer  
+|like|:str  
