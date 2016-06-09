@@ -38,20 +38,20 @@ likes
 
 ###Database creation  
 
-|users|type   
+|users|type  
 |:----|:---  
-|name|:str
+|name|:str  
 |avatar|:text  
-|top_aligned_media|:text    
-|profile|:text  
-|works|:text   
-|member_of|:text  
+|top_aligned_media|:str  
+|profile|:str  
+|works|:str  
+|member_of|:str  
 
 |prototypes|type  
 |:---------|:---  
 |user_id|:integer  
-|title|:text  
-|catch_copy|:text  
+|title|:str  
+|catch_copy|:str  
 |concept|:text  
 
 |pt_image|type  
@@ -59,15 +59,12 @@ likes
 |user_id|:integer  
 |prototype_id|:integer  
 |top_image|:text  
-|sub_image1|:text  
-|sub_image2|:text  
-|sub_image3|:text  
+|sub_image|:integer  
 
 |comments|type  
 |:-------|:---  
 |user_id|:integer  
-|prototype_id   
-|:integer  
+|prototype_id|:integer  
 |content|:text  
 
 |likes|type  
