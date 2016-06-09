@@ -41,7 +41,7 @@ likes
 |users|type  
 |:----|:---  
 |name|:str  
-|avatar|:text  
+|avatar|:str  
 |profile|:text  
 |works|:str  
 |member_of|:str  
@@ -56,7 +56,7 @@ likes
 |prototype_images|type  
 |:-------|:---  
 |prototype_id|:integer  
-|top_image|:text  
+|top_image|:str  
 |sub_image|:integer  
 
 |comments|type  
