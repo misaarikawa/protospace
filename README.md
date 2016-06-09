@@ -42,8 +42,7 @@ likes
 |:----|:---  
 |name|:str  
 |avatar|:text  
-|top_aligned_media|:str  
-|profile|:str  
+|profile|:text  
 |works|:str  
 |member_of|:str  
 
