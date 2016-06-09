@@ -19,20 +19,20 @@ users
 
 prototypes  
  belongs_to :user  
- has_many :pt_images  
+ has_many :prototype_images  
  has_many :comments  
  has_many :likes  
 
-pt_images  
- belongs_to :prototypes  
+prototype_images  
+ belongs_to :prototype  
 
 comments  
  belongs_to :user  
  belongs_to :prototype  
 
 likes  
- belongs_to :users  
- belongs_to :prototypes  
+ belongs_to :user  
+ belongs_to :prototype  
 
 
 
@@ -54,7 +54,7 @@ likes
 |catch_copy|:str  
 |concept|:text  
 
-|pt_image|type  
+|prototype_images|type  
 |:-------|:---  
 |user_id|:integer  
 |prototype_id|:integer  
