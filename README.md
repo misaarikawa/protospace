@@ -56,8 +56,8 @@ likes
 |prototype_images|type  
 |:-------|:---  
 |prototype_id|:integer  
-|image_url|:str  
-|image_status|:integer  
+|content|:str  
+|status|:integer  
 
 |comments|type  
 |:-------|:---  
