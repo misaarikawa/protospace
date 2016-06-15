@@ -8,6 +8,9 @@ Bundler.require(*Rails.groups)
 
 module Protospace
   class Application < Rails::Application
+    config.generators do |g|
+        g.test_framework false
+    end
     
     config.generators do |g|
       g.assets     false
