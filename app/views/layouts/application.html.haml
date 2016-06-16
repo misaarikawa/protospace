@@ -8,12 +8,13 @@
     = csrf_meta_tags
 
     -if user_signed_in?
-        .user_nav grid-6
-          =link_to "prototype.user.name", destroy_user_session_path, method: :delete
-          %a.post{:href=> "/prototypes/new"} NEW PROTO
+      .user_nav.grid-6
+        =link_to "user.name", destroy_user_session_path, method: :delete
+        %a.post{:href=> "/prototypes/new"} NEW PROTO
     -else
-        .grid-6
-          =link_to "GET STARTED", new_user_session_path, class: 'post'
+      .grid-6
+
+        %a.post{:href=> "/users/sign_in"} GET STARTED
 
   %body
     = yield
