@@ -11,3 +11,10 @@
 /log/*
 !/log/.keep
 /tmp
+app/assets/javascripts/prototypes.coffee
+app/assets/stylesheets/prototypes.scss
+app/controllers/prototypes_controller.rb
+app/helpers/prototypes_helper.rb
+config/locales/devise.ja.yml
+config/locales/ja.yml
+test/controllers/prototypes_controller_test.rb
