@@ -11,10 +11,6 @@
       .user_nav.grid-6
         =link_to "user.name", destroy_user_session_path, method: :delete
         %a.post{:href=> "/prototypes/new"} NEW PROTO
-    -else
-      .grid-6
-
-        %a.post{:href=> "/users/sign_in"} GET STARTED
 
   %body
     = yield
