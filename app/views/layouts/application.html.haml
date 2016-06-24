@@ -7,10 +7,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
-    -if user_signed_in?
-      .user_nav.grid-6
-        =link_to "user.name", destroy_user_session_path, method: :delete
-        %a.post{:href=> "/prototypes/new"} NEW PROTO
+
 
   %body
     = yield

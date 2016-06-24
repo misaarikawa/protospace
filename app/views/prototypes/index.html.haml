@@ -1,6 +1,7 @@
+!!!
 .navbar.navbar-default.navbar-static-top.navbar-fixed-top
   .container
-    %button.navbar-toggle{"data-target": ".navbar-responsive-collapse", "data-toggle": "collapse", type: "button"}
+    %button.navbar-toggle{"data-target" => ".navbar-responsive-collapse", "data-toggle" => "collapse", type: "button"}
       %span.icon-bar
       %span.icon-bar
       %span.icon-bar
@@ -9,20 +10,19 @@
     .navbar-collapse.collapse.navbar-responsive-collapse
       %ul.nav.navbar-nav.navbar-right
         %li.dropdown
-          %a.dropdown-toggle{"aria-expanded": "false", "data-toggle": "dropdown", href: "#", role: "button"}
-            users.name
+          %a.dropdown-toggle{"aria-expanded": "false", "data-toggle": "dropdown", href: "/", role: "button"}
+            misaarikawa
             %span.caret
-            %ul.dropdown-menu{role: "menu"}
-              %li
-                %a{href: "/users/id"} My Page
-              %li
-                %a{href: "/users/id/edit"} Profile Edit
-              %li
-                %a{"data-method": "delete", href: "/users/sign_out", rel: "nofollow"} Logout
+          %ul.dropdown-menu{role: "menu"}
+            %li
+              %a{href: "/users/id"} My Page
+            %li
+              %a{href: "/users/id/edit"} Profile Edit
+            %li
+              %a{"data-method": "delete", href: "/users/sign_out", rel: "nofollow"} Logout
         %li
           .btn.btn-primary.navbar-btn
             %a{href: "/prototypes/new"} New Proto
-
 .jumbotron
   .container.text-center
     = image_tag("header_logo.png", alt: "PROTO TYPE - SHARE THE PROTOTYPE", height: "73px")
