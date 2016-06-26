@@ -753,7 +753,6 @@ if (typeof jQuery === 'undefined') {
 
 +function ($) {
   'use strict';
-
   // DROPDOWN CLASS DEFINITION
   // =========================
 
@@ -789,6 +788,7 @@ if (typeof jQuery === 'undefined') {
       if (!$parent.hasClass('open')) return
 
       if (e && e.type == 'click' && /input|textarea/i.test(e.target.tagName) && $.contains($parent[0], e.target)) return
+console.log('読んでます')
 
       $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget))
 

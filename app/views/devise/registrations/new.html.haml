@@ -1,4 +1,3 @@
-!!!
 .navbar.navbar-default.navbar-static-top.navbar-fixed-top
   .container
     %button.navbar-toggle{"data-target": ".navbar-responsive-collapse", "data-toggle": "collapse", type: "button"}
@@ -27,41 +26,32 @@
     %header.row.user-nav.row
     .col-md-12
     %h2 Register
-
     .user-name_image.row
       .user-name.col-md-10
-      .field
-        =f.label :name
         =f.text_field :name, autofocus: "autofocus", placeholder: "Username", type: "text"
       .user-image.col-md-2
-        =f.label :avatar
-        =f.file_field :avatar, alt: "64x64", "data-holder-rendered": "true", "data-src": "holder.js/64x64", src: "", style: "display:none; width:100%; height:100%;"
+        %img#user_avatar.media-objectt{alt: "64x64", "data-holder-rendered" => "true", "data-src" => "holder.js/64x64", src: "", style: "display:none; width:100%; height:100%;"}/
         %button.btn.btn-primary
-          %a{href: ""}Add Image
-        =f.label :email
-        =f.email_field :email, autofocus: "autofocus", placeholder: "E-Mail", type: "email", value: ""
-      .field
-        =f.label :password
-        =f.password_field :password, autocomplete: "off", placeholder: "Password", type: "password"
-      %h4 Member of
-      .user-user-member.row
-        .user-name.col-md-12
-          =f.label :menmer_of
-          =f.text_field :member_of, autofocus: "autofocus", placeholder: "Member", type: "text"
-      %h4 Profile
-      .user-user-profile.row
-        .user-name.col-md-12
-          =f.label :profile
-          =f.text_field :profile, cols: "30", placeholder: "Profile", rows: "4"
-      %h4 Works
-      .user-name_image.row
-        .user-name.col-md-12
-          =f.label :works
-          =f.text_field :works, cols: "30", placeholder: "Works", rows: "4"
-      .row.text-center.user-btn
-        .actions
-          =f.submit 'Save'
+          Add Image
+          %input#upload_avatar{:name => "user[avatar]", :type => "file"}/
+      =f.email_field :email, autofocus: "autofocus", placeholder: "E-Mail", type: "email", value: ""
+
+      =f.password_field :password, autocomplete: "off", placeholder: "Password", type: "password"
+    %h4 Member of
+    .user-user-member.row
+      .user-name.col-md-12
+        =f.text_field :member_of, autofocus: "autofocus", placeholder: "Member", type: "text"
+    %h4 Profile
+    .user-user-profile.row
+      .user-name.col-md-12
+        =f.text_field :profile, cols: "30", placeholder: "Profile", rows: "4"
+    %h4 Works
+    .user-name_image.row
+      .user-name.col-md-12
+        =f.text_field :works, cols: "30", placeholder: "Works", rows: "4"
+    .row.text-center.user-btn
+      .actions
+        %input.btn.btn-lg.btn-primary.btn-block{name: "commit", type: "submit", value: "Save"}/
 .container
   %footer
-    %p
-    © PROTO SPACE 2015.
+    %p© PROTO SPACE 2015.
