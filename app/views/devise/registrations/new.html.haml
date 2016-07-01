@@ -1,36 +1,57 @@
+.navbar.navbar-default.navbar-static-top.navbar-fixed-top
+  .container
+    %button.navbar-toggle{"data-target": ".navbar-responsive-collapse", "data-toggle": "collapse", type: "button"}
+      %span.icon-bar
+      %span.icon-bar
+      %span.icon-bar
+    %a.navbar-brand{href: "/"}
+      %img{alt: "PROTO TYPE - SHARE THE PROTOTYPE", height: "36px", src: "/assets/logo-b99f177af8fb82de2d6d7b86e95c7f329d3d143edd8b225bc2875ad9dd6e0cc3.png"}/
+    .navbar-collapse.collapse.navbar-responsive-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          .btn.btn-primary.navbar-btn
+            %a{href: "/users/sign_in"} Get Started
+
+    -if user_signed_in?
+      .user_nav.grid-6
+        =link_to "user.name", destroy_user_session_path, method: :delete
+        %a.post{:href=> "/prototypes/new"} NEW PROTO
 .container
-  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-    = devise_error_messages!
-    %form#new_user.container.user-new{"accept-charset": "UTF-8", action: "/users", enctype: "multipart/form-data", method: "post"}
-      %input{name: "utf8", type: "hidden", value: "✓"}/
-      %input{name: "authenticity_token", type: "hidden", value: "z7zm6+09MeDjAACq/PjdM+eztxlXI7U5S1xeG3HYif/tmUS9K4vK3AueQ2U7GcYDkf7Uh2KW8CMXsFBFJm591g=="}/
-      .col-md-8.col-md-offset-2
-      %header.row.user-nav.row
-      .col-md-12
-      %h2 Register
-      .user-name_image.row
-        .user-name.col-md-10
-          =f.text_field :name, autofocus: "autofocus", placeholder: "Username", type: "text"
-        .user-image.col-md-2
-          %img#user_avatar.media-objectt{alt: "64x64", "data-holder-rendered" => "true", "data-src" => "holder.js/64x64", src: "", style: "display:none; width:100%; height:100%;"}/
-          %button.btn.btn-primary
-            Add Image
-            %input#upload_avatar{:name => "user[avatar]", :type => "file"}/
-        =f.email_field :email, autofocus: "autofocus", placeholder: "E-Mail", type: "email", value: ""
-        %br/
-        =f.password_field :password, autocomplete: "off", placeholder: "Password", type: "password"
-      %h4 Member of
-      .user-user-member.row
-        .user-name.col-md-12
-          =f.text_field :member_of, autofocus: "autofocus", placeholder: "Member", type: "text"
-      %h4 Profile
-      .user-user-profile.row
-        .user-name.col-md-12
-          =f.text_field :profile, cols: "30", placeholder: "Profile", rows: "4"
-      %h4 Works
-      .user-name_image.row
-        .user-name.col-md-12
-          =f.text_field :works, cols: "30", placeholder: "Works", rows: "4"
-      .row.text-center.user-btn
-        .actions
-          %input.btn.btn-lg.btn-primary.btn-block{name: "commit", type: "submit", value: "Save"}/
+= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  = devise_error_messages!
+  %form#new_user.container.user-new{"accept-charset": "UTF-8", action: "/users", enctype: "multipart/form-data", method: "post"}
+    %input{name: "utf8", type: "hidden", value: "✓"}/
+    %input{name: "authenticity_token", type: "hidden", value: "z7zm6+09MeDjAACq/PjdM+eztxlXI7U5S1xeG3HYif/tmUS9K4vK3AueQ2U7GcYDkf7Uh2KW8CMXsFBFJm591g=="}/
+    .col-md-8.col-md-offset-2
+    %header.row.user-nav.row
+    .col-md-12
+    %h2 Register
+    .user-name_image.row
+      .user-name.col-md-10
+        =f.text_field :name, autofocus: "autofocus", placeholder: "Username", type: "text"
+      .user-image.col-md-2
+        %img#user_avatar.media-objectt{alt: "64x64", "data-holder-rendered" => "true", "data-src" => "holder.js/64x64", src: "", style: "display:none; width:100%; height:100%;"}/
+        %button.btn.btn-primary
+          Add Image
+          %input#upload_avatar{:name => "user[avatar]", :type => "file"}/
+      =f.email_field :email, autofocus: "autofocus", placeholder: "E-Mail", type: "email", value: ""
+
+      =f.password_field :password, autocomplete: "off", placeholder: "Password", type: "password"
+    %h4 Member of
+    .user-user-member.row
+      .user-name.col-md-12
+        =f.text_field :member_of, autofocus: "autofocus", placeholder: "Member", type: "text"
+    %h4 Profile
+    .user-user-profile.row
+      .user-name.col-md-12
+        =f.text_field :profile, cols: "30", placeholder: "Profile", rows: "4"
+    %h4 Works
+    .user-name_image.row
+      .user-name.col-md-12
+        =f.text_field :works, cols: "30", placeholder: "Works", rows: "4"
+    .row.text-center.user-btn
+      .actions
+        %input.btn.btn-lg.btn-primary.btn-block{name: "commit", type: "submit", value: "Save"}/
+.container
+  %footer
+    %p© PROTO SPACE 2015.
