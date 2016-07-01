@@ -1,23 +1,5 @@
-!!!
-.navbar.navbar-default.navbar-static-top.navbar-fixed-top
-  .container
-    %button.navbar-toggle{"data-target": ".navbar-responsive-collapse", "data-toggle": "collapse", type: "button"}
-      %span.icon-bar
-      %span.icon-bar
-      %span.icon-bar
-    %a.navbar-brand{href: "/"}
-      %img{alt: "PROTO TYPE - SHARE THE PROTOTYPE", height: "36px", src: "/assets/logo-b99f177af8fb82de2d6d7b86e95c7f329d3d143edd8b225bc2875ad9dd6e0cc3.png"}/
-    .navbar-collapse.collapse.navbar-responsive-collapse
-      %ul.nav.navbar-nav.navbar-right
-        %li
-          .btn.btn-primary.navbar-btn
-            %a{href: "/users/sign_in"} Get Started
-
 .container
-  %form#new_user.form-signin{"accept-charset": "UTF-8", action: "/users/sign_in", method: "post"}
-    %input{name: "utf8", type: "hidden", value: "✓"}/
-    %input{name: "authenticity_token", type: "hidden", value: "OpNv+MU6LRPAOr/HsxqgGQgxdrFP4lRIfllPNh34TmgYts2uA4zWLyik/Ah0+7spfnwVL3pXEVIitUFoSk66QQ=="}/
-  =form_for(resource,as: resource_name, url: session_path(resource_name)) do |f|
+  =form_for(resource,as: resource_name, url: session_path(resource_name), html: {class: "form-signin"}) do |f|
     %h2.form-signin-heading Please sign in
     .field
     =f.email_field :email, autofocus: "autofocus", placeholder: "Email address", type: "email", value: ""
@@ -34,6 +16,3 @@
     %p
       Not a member?
       %a{href: "/users/sign_up", target: "_self"} Sign up now
-.container
-  %footer
-    %p© PROTO SPACE 2015.
