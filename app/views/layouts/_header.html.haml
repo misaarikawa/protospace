@@ -19,16 +19,16 @@
         %ul.nav.navbar-nav.navbar-right
           %li.dropdown
             %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", href: "#", role: "button"}
-              UserName
+              = current_user.name
               %span.caret
             %ul.dropdown-menu{role: "menu"}
               %li
-                %a{href: "users/:id"} My page
+                %a{href: "/users/current_user.id"} My page
               %li
                 %a{href: "#"} Profile Edit
               %li
                 =link_to "Logout", destroy_user_session_path, method: "delete"
           %li
             .btn.btn-primary.navbar-btn
-              %a{href: "/proto/new"}
+              %a{href: "/prototypes/new"}
                 New Proto

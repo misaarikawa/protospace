@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get  '/prototypes/index'  =>    'prototypes#index'
   get  '/prototypes/new'    =>    'prototypes#new'
   get  '/prototypes/show'   =>    'prototypes#show'
-  get  '/users/:id'        =>    'users#show'
+  get  '/users/:id'         =>    'users#show'
 end
