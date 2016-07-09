@@ -11,11 +11,12 @@ class UsersController < ApplicationController
 
   def update
     current_user.update(update_params)
+    redirect_to action: :show
   end
 
   private
   def update_params
-    params.require(:user).permit(:family_name, :first_name, :family_name_kana, :first_name_kana, :avatar)
+    params.require(:user).permit(:name, :avatar, :email, :profile, :member_of, :works)
   end
   
 end

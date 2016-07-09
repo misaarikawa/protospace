@@ -25,7 +25,8 @@
               %li
                 %a{href: "/users/#{current_user.id}"} My page
               %li
-                %a{href: "/users/#{current_user.id}/edit"} Profile Edit
+                %a{href: "/users/#{current_user.id}/edit"}
+                  Profile Edit
               %li
                 =link_to "Logout", destroy_user_session_path, method: "delete"
           %li
